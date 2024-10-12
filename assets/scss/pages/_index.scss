@@ -1,4 +1,4 @@
-.index{
+.index-banner{
   .banner-image{
     width: 100%;
     background-repeat: repeat;
@@ -17,6 +17,134 @@
   }
 }
 
+.index-hots{
+  background-color: #FFFCF8;
+  .hots-content{
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .nav-item{
+    background-color: #ffffff;
+  }
+  .nav-link{
+    color: #000000;
+    border: 1px solid #000000;
+    &:hover{
+      background-color: rgba(180, 57, 0, 0.2);
+      border: 1.5px solid #000000;
+    }
+  }
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: var(--bs-secondary-40);
+    background-color: rgba(200, 63, 0, 0.08);
+    border: 2px solid var(--bs-secondary-40);
+  }
+  .heart-icon{
+    width: 62.8px;
+    height: 62.8px;
+    margin: 8px;
+    background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/5a854ec2c364c80e9f5cd08aadab09967823eea1/assets/images/Interact%20Icon/Heard-01.svg");
+    background-size: cover;
+    background-position: center;
+  }
+  .heartOn{
+    background-image: url("https://raw.githubusercontent.com/Jack-Xiao-2024/Project_D01/5a854ec2c364c80e9f5cd08aadab09967823eea1/assets/images/Interact%20Icon/Heard-02.svg");
+  }
+  .card-body{
+    padding: 32px 24px 48px 24px;
+  }
+}
+
+.index-reviews{
+  background-color: #FFFCF8;
+  .reviews-number{
+    letter-spacing: 0.12em;
+  }
+  .swiper-wrapper{
+    height: auto;
+    margin-left: 38px;
+    padding-bottom: 97px;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    top: 100%;
+    transform: translateY(-50%);
+  }
+  .swiper-button-next{
+    right: 504px;
+    &:after{
+      content: '';
+    }
+  }
+  .swiper-button-prev{
+    left: 504px;
+    &:after{
+      content: '';
+    }
+  }
+}
+
+.index-faq{
+  padding: 80px 0 56px 0;
+  .faq-content{
+    margin: 0;
+  }
+  .accordion{
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-color: rgba(0,0,0,0);
+    --bs-accordion-btn-icon-width: 2.25rem;
+    --bs-accordion-btn-focus-box-shadow: 0;
+    --bs-accordion-active-bg: #ffffff;
+  }
+  .accordion-button{
+    border: 2px solid rgba(0,0,0,0);
+    padding: 10px 16px;
+    border-radius: 12px;
+    line-height: 1.2;
+    &:after{
+      background-image: url("/assets/images/Icon/IconBlack/CaretDown-B.svg");
+      background-size: cover;
+    }
+    &:hover{
+      background-color: #fff;
+      border: 2px solid #693F26;
+      color: #C83F00;
+      border-radius: 12px;
+      &:after{
+        background-image: url("/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+      }
+    }
+  }
+  .accordion-button:not(.collapsed){
+    color: #C83F00;
+    border-radius: 12px 12px 0 0;
+    &:after{
+      background-image: url("/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+    }
+    &:hover{
+      border: 2px solid rgba(0,0,0,0);
+      border-radius: 12px 12px 0 0;
+      &:after{
+        background-image: url("/assets/images/Icon/IconSecondary/CaretDown-S-40.svg");
+      }
+    }
+  }
+  .accordion-body{
+    border-radius: 0 0 12px 12px;
+    padding: 0 44px 16px 44px;
+  }
+}
+
+@media (min-width: 768px) {
+  .index{
+    .banner-image{
+      background-position: top 50% right 35%;
+    }
+  }
+
+}
+
 @media (min-width: 992px) {
   .index{
     .banner-image{
@@ -31,6 +159,23 @@
       color: #444444;
       letter-spacing: 0.16em;
       text-shadow: none;
+    }
+  }
+  .index-hots{
+    .hots-content{
+      overflow-x: visible;
+    }
+  }
+  .index-faq{
+    padding: 110px 0 48px 0;
+    .faq-content{
+      margin: 0 110px;
+    }
+    .accordion-button{
+      padding: 22px 16px;
+    }
+    .accordion-body{
+      padding: 0 96px 28px 60px;
     }
   }
 }
